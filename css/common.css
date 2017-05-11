@@ -70,8 +70,6 @@ input,textarea{
 	max-width: 640px;
 	min-width: 300px;
 	margin: 0 auto;
-	border-left:1px solid #e0e0e0;
-	border-right:1px solid #e0e0e0;
 	box-sizing: border-box;
 }
 /*======================头部开始=================== */
