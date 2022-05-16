@@ -267,7 +267,6 @@
 				}
 				var thar = this;
 				$('.s'+a).html(toDecimal2($(thar).val() * $(thar).attr('data-shui')))
-				console.log($(this).val()>0&&$('.zj'+a).val()>0)
 				if($(this).val()>0&&$('.zj'+a).val()>0){
 					$('.z'+a).html(toDecimal2($('.zj'+a).val() * $('.a'+a).attr('data-pe'+b) - $('.a'+a).val() + parseFloat($('.s'+a).html())))
 				}else{
@@ -331,7 +330,6 @@
 	   		var zsi = 0;
 	   		var zjg = 0;
 		   	for (var i =1;i<10;i++) {
-		   		console.log(i)
 		   		zje=parseFloat(zje)+Number($('.a'+i).val());
 		   		zsi=parseFloat(zsi)+Number($('.s'+i).html())
 		   		zjg=parseFloat(zjg)+Number($('.z'+i).html());	
