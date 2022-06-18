@@ -240,6 +240,60 @@
 					</li>
 				</ul>
 			</div>
+			<div class="box1">
+				<ul>
+					<li class="weui-cell weui-cell_active">
+						<div class="weui-cell__hd"><label class="weui-label">三中三755</label></div>
+						<div class="weui-cell__bd">
+							<input id="js_input" class="weui-input a10" data-pe1="755" data-shui="0.15" placeholder="金额">
+							<span>水:<s class="s10">0</s></span>
+						</div>
+					</li>
+					<li class="weui-cell weui-cell_active">
+						<div class="weui-cell__hd"><label class="weui-label">中</label></div>
+						<div class="weui-cell__bd">
+							<input id="js_input" class="weui-input zj10" placeholder="0">
+							<span class="zz10 blue">总:<s class="z10">0</s></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="box1">
+				<ul>
+					<li class="weui-cell weui-cell_active">
+						<div class="weui-cell__hd"><label class="weui-label">二中二65</label></div>
+						<div class="weui-cell__bd">
+							<input id="js_input" class="weui-input a11" data-pe1="65" data-shui="0.15" placeholder="金额">
+							<span>水:<s class="s11">0</s></span>
+						</div>
+					</li>
+					<li class="weui-cell weui-cell_active">
+						<div class="weui-cell__hd"><label class="weui-label">中</label></div>
+						<div class="weui-cell__bd">
+							<input id="js_input" class="weui-input zj11" placeholder="0">
+							<span class="zz11 blue">总:<s class="z11">0</s></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="box1">
+				<ul>
+					<li class="weui-cell weui-cell_active">
+						<div class="weui-cell__hd"><label class="weui-label">单双大小1.95</label></div>
+						<div class="weui-cell__bd">
+							<input id="js_input" class="weui-input a12" data-pe1="1.95" data-shui="0.013" placeholder="金额">
+							<span>水:<s class="s12">0</s></span>
+						</div>
+					</li>
+					<li class="weui-cell weui-cell_active">
+						<div class="weui-cell__hd"><label class="weui-label">中</label></div>
+						<div class="weui-cell__bd">
+							<input id="js_input" class="weui-input zj12" placeholder="0">
+							<span class="zz12 blue">总:<s class="z12">0</s></span>
+						</div>
+					</li>
+				</ul>
+			</div>
 			<div class="zong">
 				<span>总金额:<s class="zje">0</s></span><span>水:<s class="zsi">0</s></span><span>结果:<s class="zjg">0</s></span>
 			</div>
@@ -255,6 +309,9 @@
 		jishu(7,2);
 		jishu(8,1);
 		jishu(9,1);
+		jishu(10,1);
+		jishu(11,1);
+		jishu(12,1);
 	   function jishu(a,c){
 	   		var b=1
 			$('.a'+a).on('change', function() {
@@ -329,7 +386,7 @@
 	   		var zje = 0;
 	   		var zsi = 0;
 	   		var zjg = 0;
-		   	for (var i =1;i<10;i++) {
+		   	for (var i =1;i<13;i++) {
 		   		zje=parseFloat(zje)+Number($('.a'+i).val());
 		   		zsi=parseFloat(zsi)+Number($('.s'+i).html())
 		   		zjg=parseFloat(zjg)+Number($('.z'+i).html());	
