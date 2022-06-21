@@ -14,6 +14,7 @@
 			.jf-from {
 				font-size: 15px;
 				padding: 16px;
+				padding-bottom: 80px;
 			}
 			
 			.weui-cell {
@@ -51,6 +52,24 @@
 			.blue{
 				color: blue;
 			}
+			.zong1{
+				position: fixed;
+				width: 99%;
+				bottom: 0;
+				margin: 0 auto;
+				background: #FFFFFF;
+				border: 1px solid #000000;
+			}
+			.yin{
+				text-align: center;
+				
+			}
+			.yin span{
+				padding: 5px 100px;
+				background: #06AE56;
+				color: #FFFFFF;
+				font-size: 15px;
+			}
 			.zong{
 				padding: 10px 0;
 				font-size: 16px;
@@ -62,6 +81,9 @@
 			.zong span{
 				flex: 1;
 				text-align: center;
+			}
+			.show{
+				display: none;
 			}
 		</style>
 	</head>
@@ -294,10 +316,16 @@
 					</li>
 				</ul>
 			</div>
+			
+		</section>
+		<div class="zong1">
+			<div class="yin">
+				<span class="open" data-type = "1">隐藏</span>
+			</div>
 			<div class="zong">
 				<span>总金额:<s class="zje">0</s></span><span>水:<s class="zsi">0</s></span><span>结果:<s class="zjg">0</s></span>
 			</div>
-		</section>
+		</div>
 	</body>
 	<script>
 		jishu(1,1);
@@ -382,13 +410,33 @@
 				})
 			}
 		}
+	   $('.open').on('click',function(){
+	   		if($(this).attr('data-type')==1){
+	   			$('.jf-from>div').each(function(){
+	   				if($(this).find('input').eq(0).val()==''){
+	   					$(this).addClass('show')
+	   				}else{
+	   					$(this).removeClass('show')
+	   				}
+	   			})
+	   			$(this).attr('data-type','0')
+	   			$(this).html('显示');
+	   		}else{
+	   			$(this).attr('data-type','1')
+	   			$('.jf-from>div').each(function(){
+	   				$(this).removeClass('show')
+	   			})
+	   			$(this).html('隐藏');
+	   			
+	   		}
+	   })
 	   function zongheji(){
 	   		var zje = 0;
 	   		var zsi = 0;
 	   		var zjg = 0;
 		   	for (var i =1;i<13;i++) {
 		   		zje=parseFloat(zje)+Number($('.a'+i).val());
-		   		zsi=parseFloat(zsi)+Number($('.s'+i).html())
+		   		zsi=parseFloat(zsi)+Number($('.s'+i).html());
 		   		zjg=parseFloat(zjg)+Number($('.z'+i).html());	
 		   	}
 		   	$('.zje').html(toDecimal2(zje));
